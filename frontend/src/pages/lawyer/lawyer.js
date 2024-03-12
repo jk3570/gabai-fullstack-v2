@@ -5,7 +5,7 @@ import { MeetingProvider } from "@videosdk.live/react-sdk";
 import { authToken, createMeeting } from "../../API";
 import { Helmet } from "react-helmet";
 
-function VideoCon() {
+const VideoCon = () => {
   const [meetingId, setMeetingId] = useState(null);
 
   const getMeetingAndToken = async (id) => {
@@ -32,7 +32,7 @@ function VideoCon() {
   ) : (
     <JoinScreen getMeetingAndToken={getMeetingAndToken} />
   );
-}
+};
 
 const App = () => {
   return (
